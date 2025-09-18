@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+    <data noupdate="1">
+        <record id="payment_method_moyasar" model="payment.method">
+            <field name="name">Moyasar</field>
+            <field name="code">moyasar</field>
+            <field name="sequence">1000</field>
+            <field name="active">True</field>
+            <field name="image" type="base64" file="wk_payment_moyasar/static/description/icon.png"/>
+            <field name="support_tokenization">False</field>
+            <field name="support_express_checkout">False</field>
+            <field name="support_refund"></field>
+        </record>
+
+        <record id="moyasar_payment_connect" model="payment.provider">
+            <field name="name">Moyasar</field>
+            <field name="code">moyasar</field>
+            <field name="state">test</field>
+            <field name="image_128" type="base64" file="wk_payment_moyasar/static/description/icon.png"/>
+            <field name="module_id" ref="base.module_wk_payment_moyasar"/>
+            <field name="redirect_form_view_id" ref="wk_payment_moyasar.moyasar_form"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="moyasar_public_key">dummy</field>
+            <field name="moyasar_secret_key">dummy</field>
+            <field name="payment_method_ids" eval="[(6, 0, [ref('wk_payment_moyasar.payment_method_moyasar'),])]"/>
+        </record>
+    </data>
+</odoo>

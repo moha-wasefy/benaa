@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+    
+    <template id="moyasar_form">
+        <div>
+            <input type="hidden" name="amount" class="amount" t-att-value="amount" />
+            <input type="hidden" name="currency" class="currency" t-att-value="currency" />
+            <input type="hidden" name="description" class="description" t-att-value="description" />
+            <input type="hidden" name="publishable_api_key" class="publishable_api_key" t-att-value="publishable_api_key" />
+            <input type="hidden" name="callback_url" class="callback_url" t-att-value="callback_url" />
+        </div>
+    </template>
+
+</odoo>

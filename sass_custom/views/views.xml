@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+    <!-- Inherit Form View to Modify it -->
+    <record id="sass_kat_product" model="ir.ui.view">
+        <field name="name">sass_kat_product</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='uom_po_id']" position="after">
+                <!-- Add your fields or attributes here -->
+              <field name="invoice_nums"/>
+              <field name="inventory_nums"/>
+              <field name="employee_nums"/>
+              <field name="pos_nums"/>
+            </xpath>
+
+        </field>
+    </record>
+  </data>
+</odoo>

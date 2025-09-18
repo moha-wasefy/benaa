@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+    <record id ="moyasar_payment_form_view" model="ir.ui.view">
+        <field name="name">moyasar.payment.form.view</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="provider_credentials"]' position="after">
+                <group invisible="code != 'moyasar'">
+                    <field name="moyasar_public_key" password="True"/>
+                    <field name="moyasar_secret_key" password="True"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
