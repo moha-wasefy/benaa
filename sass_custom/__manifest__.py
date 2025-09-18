@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "sass_custom",
+    'name': "Saas Custom",
 
     'summary': "Short (1 phrase/line) summary of the module's purpose",
 
